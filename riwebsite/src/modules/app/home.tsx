@@ -1,0 +1,62 @@
+import React from "react";
+import ServiceCard from "../cards/service/servicecard";
+import TechCard from "../cards/tech/techcard";
+import TeamCard from "../cards/team/teamcard";
+import { Carousel } from "antd";
+
+import carouselleft from "../../assets/images/carouselleft.png";
+import carouselright from "../../assets/images/carouselright.png";
+import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "./styles";
+
+//@ts-ignore
+export default function Home() {
+  //@ts-ignore
+  const props = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  //@ts-ignore
+  let { carousel } = React.createRef();
+
+  //@ts-ignore
+
+  function previous() {
+    carousel.prev();
+
+
+    console.log("previosu---");
+  }
+
+  //@ts-ignore
+  function next() {
+    carousel.next();
+
+    console.log("next---->")
+  }
+
+  return (
+    <div>
+      <CarouselLinkLeft onClick={previous}>
+        <CarouselImage src={carouselleft} alt="imagee" />
+       
+      </CarouselLinkLeft>
+
+      <Carousel ref={node => (carousel = node)} {...props}>
+        <ServiceCard />
+
+        <ServiceCard />
+      </Carousel>
+
+      <CarouselLinkRight onClick={next}>
+        <CarouselImage src={carouselright} alt="image" />
+      </CarouselLinkRight>
+
+      <TechCard />
+      <TeamCard />
+    </div>
+  );
+}
