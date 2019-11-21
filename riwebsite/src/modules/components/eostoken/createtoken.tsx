@@ -1,13 +1,21 @@
-import React from 'react'
-import FreeToken from './freetoken'
-import PremiumToken from './premiumtoken'
+import React from "react";
+//import styled from "styled-components";
+import FreeToken from "./freetoken";
+import PremiumToken from "./premiumtoken";
+import Blockchain from '../../app/header/blockchain'
 
-export default function CreateToken(){
+//import Summary from '../../components/eostoken/tokensummary/summary'
 
-    return (
-        <div>
-            <FreeToken/>
-            <PremiumToken/>
-        </div>
-    )
+//const TokenDiv = styled.div``;
+
+export default function CreateToken() {
+  return (
+    <div>
+      <Blockchain/>
+      
+      <FreeToken/>
+      <PremiumToken/>
+      
+    </div>
+  );
 }

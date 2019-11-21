@@ -1,34 +1,29 @@
 import React from "react";
 import TreeDrop from "../../../shared/componets/treedrop/treedrop";
-import { DivContainer, TokenHeading } from "./styles";
-import AirDrop from '../../../modules/components/eostoken/subpremium/airdrop'
+
+import AirDrop from "../../../modules/components/eostoken/subpremium/airdrop";
+import {Row,Col} from 'antd'
+import { CommonHeading } from "../../../shared/styles/style";
+import {Container} from './styles'
 
 export default function PremiumToken() {
   return (
+    <Container>
+      <CommonHeading>PREMIUM TOKEN FEATURES</CommonHeading>
 
-    <div>
-        <TokenHeading>PREMIUM TOKEN FEATURES</TokenHeading>
+      <Row>
+        <Col span={8} offset={8}>
+          <TreeDrop headline={"ADD STAKING"} />
 
-    <DivContainer>
-      <TreeDrop headline={"ADD STAKING"}/>
-     
+          <TreeDrop headline={"ADD AIRDROP"} airdrop={<AirDrop />} />
 
-      <TreeDrop headline={"ADD AIRDROP"}
-
-      airdrop={<AirDrop/>}
-      
-    
-      />
-
-      
-
-      <TreeDrop headline={"ADD INFLATION"} />
-      <TreeDrop headline={"ADD DEFLATION"} />
-      <TreeDrop headline={"ADD TRANSFER FEE"} />
-      <TreeDrop headline={"WHITELIST"} />
-      <TreeDrop headline={"BLACKLIST"} />
-    </DivContainer>
-    </div>
+          <TreeDrop headline={"ADD INFLATION"} />
+          <TreeDrop headline={"ADD DEFLATION"} />
+          <TreeDrop headline={"ADD TRANSFER FEE"} />
+          <TreeDrop headline={"WHITELIST"} />
+          <TreeDrop headline={"BLACKLIST"} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
-

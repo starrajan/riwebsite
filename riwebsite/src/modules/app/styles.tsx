@@ -47,54 +47,24 @@ background:lightgray;
 
 
 `;
-export const ChildDiv = styled.div`
-  width: 463px;
-  text-align: center;
-  margin: auto;
-`;
-export const Heading = styled.h1`
-margin:0px;
 
-font-size: 20px;
-
-font-style:normal;
-font-weight:normal;
-letter-spacing:0.12em
-
-text-transform:uppercase;
-
-@media(min-width:1024px){
-          font-size:28px;
-
-}
-`;
-export const Paragraph = styled.p`
-  margin: 23px 0 0 0;
-  font-size: 10px;
-
-  letter-spacing: 0.12em;
-
-  @media (min-width: 1024px) {
-    font-size: 14px;
-  }
-`;
 
 export const BlockButton = styled.button`
-  width: 120px;
-  height: 40px;
+  padding:3%;
   margin: 54px 0 0 0;
 
   box-sizing: border-box;
   font-size: 10px;
   background: #fff;
   border: 2px solid #000000;
-  
+
 
   @media (min-width: 1024px) {
-    width: 210px;
-    height: 62px;
+
+    padding:3%;
     font-size: 14px;
-    cursor:pointer;
+    cursor: pointer;
+    box-sizing: border-box;
   }
 `;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import IconCard from "../../../shared/componets/iconcard/iconcard";
-import { CardContainer } from "./styles";
+import { CardContainer } from "../../../shared/styles/style";
 import { CommonHeading } from "../../../shared/styles/style";
 import { Row, Col } from "antd";
 import biometric from "../../../assets/images/biometric.png";

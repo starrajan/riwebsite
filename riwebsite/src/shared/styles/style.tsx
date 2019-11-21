@@ -17,9 +17,22 @@ export const FormLabel = styled.label`
   display: block;
 `;
 export const FormField = styled(Field)`
-  width: 400px;
-  height: 42px;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding-left:10px;
+  width:100%;
+  padding:4%;
+`;
+
+export const CardContainer =styled.div<any>`
+
+max-width:1005px;
+margin:100px auto;
+
+`;
+export const ServiceContainer =styled.div`
+
+max-width:1150px;
+margin:100px auto;
+
 `;

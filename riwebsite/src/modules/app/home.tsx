@@ -7,6 +7,7 @@ import { Carousel } from "antd";
 import carouselleft from "../../assets/images/carouselleft.png";
 import carouselright from "../../assets/images/carouselright.png";
 import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "./styles";
+import Blockchain from '../app/header/blockchain'
 
 //@ts-ignore
 export default function Home() {
@@ -24,21 +25,23 @@ export default function Home() {
 
   //@ts-ignore
 
-  function previous() {
+  const previous=()=> {
     carousel.prev();
 
 
-    console.log("previosu---");
+    // console.log("previosu---");
   }
 
   //@ts-ignore
-  function next() {
+  const  next=()=> {
     carousel.next();
 
-    console.log("next---->")
+    //console.log("next---->")
   }
 
   return (
+    <div>
+      <Blockchain/>
     <div>
       <CarouselLinkLeft onClick={previous}>
         <CarouselImage src={carouselleft} alt="imagee" />
@@ -57,6 +60,8 @@ export default function Home() {
 
       <TechCard />
       <TeamCard />
+    </div>
+
     </div>
   );
 }

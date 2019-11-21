@@ -1,21 +1,18 @@
 import React from "react";
 import IconCard from "../../../shared/componets/iconcard/iconcard";
-//import { CardContainer } from './styles'
+import  { ServiceContainer } from '../../../shared/styles/style'
 import { CommonHeading } from "../../../shared/styles/style";
 import { Row, Col } from "antd";
-import styled from "styled-components";
+//import styled from "styled-components";
 import gallery from "../../../assets/images/gallery.png";
 import mobile from "../../../assets/images/mobile.png";
 import starcomputer from "../../../assets/images/starcomputer.png";
 
-const CardContainer = styled.div<any>`
-  max-width: 1150px;
-  margin: 100px auto;
-`;
+
 
 export default function ServiceCard() {
   return (
-    <CardContainer>
+    <ServiceContainer>
       <CommonHeading>SERVICES</CommonHeading>
       <Row>
         <Col xs={24} lg={8}>
@@ -63,6 +60,6 @@ export default function ServiceCard() {
           />
         </Col>
       </Row>
-    </CardContainer>
+    </ServiceContainer>
   );
 }
