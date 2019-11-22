@@ -1,12 +1,12 @@
 import React from "react";
-import ServiceCard from "../../cards/service/servicecard";
-import TechCard from "../../cards/tech/techcard";
-import TeamCard from "../../cards/team/teamcard";
+import ServiceCard from "./cards/service/servicecard";
+import TechCard from "./cards/tech/techcard";
+import TeamCard from "./cards/team/teamcard";
 import { Carousel } from "antd";
 
 import carouselleft from "../../../assets/images/carouselleft.png";
 import carouselright from "../../../assets/images/carouselright.png";
-import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "../style";
+import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "./style";
 import Blockchain from "../header/blockchain";
 //import { CarouselDiv } from "./style";
 

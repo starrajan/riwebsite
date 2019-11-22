@@ -1,11 +1,11 @@
 import React from "react";
-import { ImageCard } from "../../../shared/componets/imagecard/imagecard";
-import { CardContainer } from "../../../shared/styles/styles";
-import { CommonHeading } from "../../../shared/styles/styles";
+import { ImageCard } from "../../../../../shared/componets/imagecard/imagecard"
+import { CardContainer } from "../../../../../shared/styles/styles"
+import { CommonHeading } from "../../../../../shared/styles/styles"
 //import codezero from '../../../assets/images/codezero.jpg'
-import Jesse from "../../../assets/images/Jesse.png";
-import Prasanjit from "../../../assets/images/Prasanjit.png";
-import Tyson from "../../../assets/images/Tyson.png";
+import Jesse from "../../../../../assets/images/Jesse.png"
+import Prasanjit from "../../../../../assets/images/Prasanjit.png"
+import Tyson from "../../../../../assets/images/Tyson.png"
 import { Row, Col } from "antd";
 
 export default function TeamCard() {

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Menu, Button, Icon } from "antd";
 import styled from "styled-components";
-//import  {screenSizes}  from '../../shared/styles/theme'
-//import GetStarted from "./button/getstarted";
 
 import { Link } from "react-router-dom";
 
-import { LogoDiv, NavBar } from "../style";
+import { LogoDiv, NavBar } from "./style";
 
 const MenuDiv = styled(Menu)<any>`
   list-style-type: none;

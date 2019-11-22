@@ -1,11 +1,11 @@
 import React from "react";
-import IconCard from "../../../shared/componets/iconcard/iconcard";
-import { CardContainer } from "../../../shared/styles/styles";
-import { CommonHeading } from "../../../shared/styles/styles";
+import IconCard from "../../../../../shared/componets/iconcard/iconcard";
+import { CardContainer } from "../../../../../shared/styles/styles";
+import { CommonHeading } from "../../../../../shared/styles/styles";
 import { Row, Col } from "antd";
-import biometric from "../../../assets/images/biometric.png";
-import carousel from "../../../assets/images/carousel.png";
-import computer from "../../../assets/images/computer.png";
+import biometric from "../../../../../assets/images/biometric.png";
+import carousel from "../../../../../assets/images/carousel.png";
+import computer from "../../../../../assets/images/computer.png";
 
 export default function TechCard() {
   return (
