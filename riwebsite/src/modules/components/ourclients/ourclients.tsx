@@ -4,7 +4,7 @@ import { Row, Col } from "antd";
 import moonlight from "../../../assets/images/moonlight.png";
 //import blockstart from "../../../assets/images/blockstart.png";
 import { DivContainer } from "./styles";
-import { CommonHeading } from "../../../shared/styles/style";
+import { CommonHeading } from "../../../shared/styles/styles";
 import Innovation from "../../app/header/innovation";
 
 export default function OurClients() {
@@ -15,14 +15,14 @@ export default function OurClients() {
       <DivContainer>
         <CommonHeading>PAST CLIENTS AND PROJECTS</CommonHeading>
 
-        <Row >
+        <Row>
           <Col xs={24} lg={8}>
             <ClientCard
               iconCompany={moonlight}
               paragraph={`Your dynamic agreements platform - 
                 Conquering organizational 
                 challenges of today.`}
-              link={`https://google.com`}
+              link={1}
             />
           </Col>
           <Col xs={24} lg={8}>
@@ -30,7 +30,7 @@ export default function OurClients() {
               iconCompany={moonlight}
               paragraph={`Build Real-World Blockchain 
                 Applications Accelerate Your Growth`}
-              link={`https://google.com`}
+              link={2}
             />
           </Col>
           <Col xs={24} lg={8}>
@@ -39,7 +39,7 @@ export default function OurClients() {
               paragraph={`Secure & Efficient Peer-to-Peer
             Barter. #BuiltOnEOSIO blockchain 
             technology.`}
-              link={`https://google.com`}
+              link={3}
             />
           </Col>
         </Row>
@@ -50,7 +50,7 @@ export default function OurClients() {
               paragraph={`Your dynamic agreements platform - 
           Conquering organizational challenges 
           of today.`}
-              link={`https://google.com`}
+              link={4}
             />
           </Col>
         </Row>

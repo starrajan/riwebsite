@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Wrapper, Image, IdeasParagraph } from "./styles";
+import { Wrapper, Image, IdeasParagraph } from "./style";
 import { Row, Col } from "antd";
 import innovation from "../../../assets/images/innovation.png";
 
 export default function Innovation() {
   return (
     <Wrapper>
-      <Row >
+      <Row>
         <Col xs={24} lg={12}>
           <IdeasParagraph>
             Bringing Great Ideas To Life Through Innovative Ideas And Technical

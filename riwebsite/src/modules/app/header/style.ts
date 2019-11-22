@@ -10,13 +10,11 @@ export const DivWrapper = styled.div`
 `;
 export const Wrapper = styled.div`
   display: flex;
- 
+
   align-items: center;
 
   height: 700px;
   background: thistle;
-  
-  
 `;
 export const ChildDiv = styled.div`
   width: 40%;
@@ -63,7 +61,6 @@ export const IdeasParagraph = styled.p`
   box-sizing: border-box;
   @media (min-width: 1024px) {
     margin-top: auto;
-    
   }
 `;
 

@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { Checkbox } from "antd";
 import { DatePicker } from "antd";
-import { FormLabel } from "../../../../shared/styles/style";
-import styled from 'styled-components'
+import { FormLabel } from "../../../../shared/styles/styles";
+import styled from "styled-components";
 
-
-const AirdropDiv=styled.div<any>`
-display: ${props=>props.check ? "block":"none"};
-
+const AirdropDiv = styled.div<any>`
+  display: ${props => (props.check ? "block" : "none")};
 `;
-const AirgrabDiv=styled.div<any>`
-display:${props=>props.check ? "block":"none"};
+const AirgrabDiv = styled.div<any>`
+  display: ${props => (props.check ? "block" : "none")};
 `;
 
 export default function AirDrop() {
@@ -25,7 +23,7 @@ export default function AirDrop() {
         AirGrap
       </Checkbox>
 
-      <AirdropDiv  check={check}>
+      <AirdropDiv check={check}>
         <FormLabel>Airdrop Date</FormLabel>
         <DatePicker />
       </AirdropDiv>

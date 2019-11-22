@@ -1,13 +1,14 @@
 import React from "react";
-import ServiceCard from "../cards/service/servicecard";
-import TechCard from "../cards/tech/techcard";
-import TeamCard from "../cards/team/teamcard";
+import ServiceCard from "../../cards/service/servicecard";
+import TechCard from "../../cards/tech/techcard";
+import TeamCard from "../../cards/team/teamcard";
 import { Carousel } from "antd";
 
-import carouselleft from "../../assets/images/carouselleft.png";
-import carouselright from "../../assets/images/carouselright.png";
-import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "./styles";
-import Blockchain from '../app/header/blockchain'
+import carouselleft from "../../../assets/images/carouselleft.png";
+import carouselright from "../../../assets/images/carouselright.png";
+import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "../style";
+import Blockchain from "../header/blockchain";
+//import { CarouselDiv } from "./style";
 
 //@ts-ignore
 export default function Home() {
@@ -25,30 +26,28 @@ export default function Home() {
 
   //@ts-ignore
 
-  const previous=()=> {
+  const previous = () => {
     carousel.prev();
 
-
     // console.log("previosu---");
-  }
+  };
 
   //@ts-ignore
-  const  next=()=> {
+  const next = () => {
     carousel.next();
 
     //console.log("next---->")
-  }
+  };
 
   return (
     <div>
-      <Blockchain/>
-    <div>
+      <Blockchain />
+
       <CarouselLinkLeft onClick={previous}>
         <CarouselImage src={carouselleft} alt="imagee" />
-       
       </CarouselLinkLeft>
 
-      <Carousel ref={node => (carousel = node)} {...props}>
+      <Carousel ref={node => (carousel = node)} {...props} autoplay>
         <ServiceCard />
 
         <ServiceCard />
@@ -60,8 +59,6 @@ export default function Home() {
 
       <TechCard />
       <TeamCard />
-    </div>
-
     </div>
   );
 }

@@ -1,14 +1,12 @@
 import React from "react";
 import IconCard from "../../../shared/componets/iconcard/iconcard";
-import  { ServiceContainer } from '../../../shared/styles/style'
-import { CommonHeading } from "../../../shared/styles/style";
+import { ServiceContainer } from "../../../shared/styles/styles";
+import { CommonHeading } from "../../../shared/styles/styles";
 import { Row, Col } from "antd";
 //import styled from "styled-components";
 import gallery from "../../../assets/images/gallery.png";
 import mobile from "../../../assets/images/mobile.png";
 import starcomputer from "../../../assets/images/starcomputer.png";
-
-
 
 export default function ServiceCard() {
   return (

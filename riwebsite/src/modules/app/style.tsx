@@ -27,7 +27,7 @@ export const NavBar = styled.div`
 
   position: fixed;
   background: lavender;
-  z-index: 1 !important;
+  z-index: 2 !important;
   display: flex;
 
   @media (min-width: 1024px) {
@@ -48,9 +48,8 @@ background:lightgray;
 
 `;
 
-
 export const BlockButton = styled.button`
-  padding:3%;
+  padding: 3% 5%;
   margin: 54px 0 0 0;
 
   box-sizing: border-box;
@@ -58,10 +57,7 @@ export const BlockButton = styled.button`
   background: #fff;
   border: 2px solid #000000;
 
-
   @media (min-width: 1024px) {
-
-    padding:3%;
     font-size: 14px;
     cursor: pointer;
     box-sizing: border-box;
@@ -76,7 +72,7 @@ export const CarouselLinkLeft = styled.a`
     position: absolute;
     left: 200px;
     top: 800px;
-    z-index: 100;
+    z-index: 1;
   }
 `;
 

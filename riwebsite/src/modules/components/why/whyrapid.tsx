@@ -1,12 +1,11 @@
-import React from 'react'
-import Blockchain from '../../app/header/blockchain'
+import React from "react";
+import Blockchain from "../../app/header/blockchain";
 
-export default function WhyRapid(){
-
-    return (
-        <div>
-            <Blockchain/>
-        <div>Why Rapid Innovation Page</div>
-        </div>
-    )
+export default function WhyRapid() {
+  return (
+    <div>
+      <Blockchain />
+      <div>Why Rapid Innovation Page</div>
+    </div>
+  );
 }

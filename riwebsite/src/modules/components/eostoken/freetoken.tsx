@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Form } from "react-final-form";
 
 import { FieldDiv } from "./styles";
-import { FormLabel, FormField } from ".././../../shared/styles/style";
+import { FormLabel, FormField } from "../../../shared/styles/styles";
 
 import Summary from "./tokensummary/summary";
 
-import { CommonHeading } from "../../../shared/styles/style";
+import { CommonHeading } from "../../../shared/styles/styles";
 import { Container } from "./styles";
 
 import { Row, Col } from "antd";
@@ -81,9 +81,7 @@ export default function FreeToken() {
           />
         </Col>
         <Col xs={{ span: 24 }} lg={{ span: 8 }}>
-           <Summary
-            data={data}
-          />
+          <Summary data={data} />
         </Col>
       </Row>
     </Container>

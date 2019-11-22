@@ -1,7 +1,7 @@
 import React from "react";
 import IconCard from "../../../shared/componets/iconcard/iconcard";
-import { CardContainer } from "../../../shared/styles/style";
-import { CommonHeading } from "../../../shared/styles/style";
+import { CardContainer } from "../../../shared/styles/styles";
+import { CommonHeading } from "../../../shared/styles/styles";
 import { Row, Col } from "antd";
 import biometric from "../../../assets/images/biometric.png";
 import carousel from "../../../assets/images/carousel.png";

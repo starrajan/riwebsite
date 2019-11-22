@@ -1,70 +1,40 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Heading, Paragraph } from './styles'
-import { Container } from './styles'
+import React from "react";
 
-
-
-
-
-const Img = styled.img<any>`
-
-height:30px;
-
-`;
-
-// const CardHeading = styled(Heading)`
-
-// `;
-
-// const CardParagraph = styled(Paragraph)`
-// `;
-
+import { CardHeading, CardText } from "../../styles/styles";
+import { Img } from "./style";
+import { IconContainer } from "./style";
 
 export default function IconCard(props: any) {
+  // const rendericon = (num: any) => {
 
-    // const rendericon = (num: any) => {
+  //     switch (num) {
 
-       
-    //     switch (num) {
+  //         case 1:
+  //             return <i className="fas fa-desktop"></i>;
 
-    //         case 1:
-    //             return <i className="fas fa-desktop"></i>;
+  //         case 2:
+  //             return <i className="fas fa-desktop"></i>;
 
-    //         case 2:
-    //             return <i className="fas fa-desktop"></i>;
+  //         case 3:
+  //             return <i className="fas fa-desktop"></i>;
+  //         case 4:
+  //             return <i className="fas fa-desktop"></i>;
+  //         case 5:
+  //             return <i className="fas fa-desktop"></i>;
+  //         case 6:
+  //             return <i className="fas fa-desktop"></i>;
 
-    //         case 3:
-    //             return <i className="fas fa-desktop"></i>;
-    //         case 4:
-    //             return <i className="fas fa-desktop"></i>;
-    //         case 5:
-    //             return <i className="fas fa-desktop"></i>;
-    //         case 6:
-    //             return <i className="fas fa-desktop"></i>;
+  //         default: return null;
+  //     }
 
-    //         default: return null;
-    //     }
+  // }
+  //console.log("size;;---", props);
 
-
-    // }
-        console.log("size;;---",props);
-
-    return (
-        
-        <Container border={props.borderId} >
-
-
-            <Img src={props.iconId} alt="images">
-                
-            </Img>
-            <Heading>{props.heading}</Heading>
-            <Paragraph>{props.paragraph}</Paragraph>
-
-        </Container>
-        
-
-
-
-    )
+  return (
+    <IconContainer border={props.borderId}>
+      <Img src={props.iconId} alt="images"></Img>
+      <CardHeading>{props.heading}</CardHeading>
+      <CardText>{props.paragraph}</CardText>
+    </IconContainer>
+  );
 }

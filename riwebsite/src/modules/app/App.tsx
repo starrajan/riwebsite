@@ -1,17 +1,14 @@
 import * as React from "react";
-import Navbar from "./Navbar";
-import { MainContainer } from "./styles";
-//import ServicesCard from '../cards/servicecard'
-// import TechCard from '../cards/tech/techcard'
-// import TeamCard from '../cards/team/teamcard'
-//import ServicesCard from '../cards/service/servicecard'
+import Navbar from "../app/navbar/navbar";
+import { MainContainer } from "./style";
+
 import About from "../components/about/about";
 import WhyRapid from "../components/why/whyrapid";
 import OurClients from "../components/ourclients/ourclients";
 import Meeting from "../components/meeting/meeting";
 import CreateToken from "../components/eostoken/createtoken";
 import Team from "../components/team/team";
-import Home from "./home";
+import Home from "./home/home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {

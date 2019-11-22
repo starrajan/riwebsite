@@ -2,9 +2,9 @@ import React from "react";
 import TreeDrop from "../../../shared/componets/treedrop/treedrop";
 
 import AirDrop from "../../../modules/components/eostoken/subpremium/airdrop";
-import {Row,Col} from 'antd'
-import { CommonHeading } from "../../../shared/styles/style";
-import {Container} from './styles'
+import { Row, Col } from "antd";
+import { CommonHeading } from "../../../shared/styles/styles";
+import { Container } from "./styles";
 
 export default function PremiumToken() {
   return (
