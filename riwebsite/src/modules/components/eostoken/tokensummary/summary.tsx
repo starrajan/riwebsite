@@ -28,7 +28,7 @@ export default function Summary(props: any) {
       </TokenText>
       <TokenText>{`Issue Tokens to:${issueAccount}`}</TokenText>
       <Total>
-        {`Total: ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
+        {`Total: ${issueTokens} ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
       </Total>
     </DivSummary>
   );
