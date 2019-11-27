@@ -9,27 +9,19 @@ export default function Summary(props: any) {
     issueTokens,
     issueAccount
   } = props.data;
-  console.log('ptrops--',props)
+  console.log("ptrops--", props);
   return (
     <DivSummary>
       <Header>Token Summary</Header>
       <TokenText>
-       {` {TokenAccountName}:
+        {` {TokenAccountName}:
         ${accountName}`}
       </TokenText>
-      <TokenText>
-        {`{TokenSYMBOL}: ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
-      </TokenText>
-      <TokenText>
-       { `Max Supply:${maxSupply} ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
-      </TokenText>
-      <TokenText>
-        {`Issue Tokens:${issueTokens} ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
-      </TokenText>
+      <TokenText>{`{TokenSYMBOL}: ${tokenSYMBOL}`}</TokenText>
+      <TokenText>{`Max Supply:${maxSupply} ${tokenSYMBOL}`}</TokenText>
+      <TokenText>{`Issue Tokens:${issueTokens} ${tokenSYMBOL}`}</TokenText>
       <TokenText>{`Issue Tokens to:${issueAccount}`}</TokenText>
-      <Total>
-        {`Total: ${issueTokens} ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
-      </Total>
+      <Total>{`Total: ${issueTokens} ${tokenSYMBOL}`}</Total>
     </DivSummary>
   );
 }

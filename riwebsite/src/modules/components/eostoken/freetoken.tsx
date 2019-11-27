@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
+import styled from "styled-components";
 
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 
 import { FieldDiv } from "./styles";
 import { FormLabel, FormField } from "../../../shared/styles/styles";
@@ -16,17 +17,24 @@ import { Row, Col } from "antd";
 const SignupSchema = Yup.object().shape({
   accountName: Yup.string()
     .length(12, "Must be 12 Character")
+    .matches(/^.[1-5a-zA-Z]+$/, "Must be Numbers between 1 to 5")
 
     .required("Required"),
 
   tokenSYMBOL: Yup.string()
     .min(3, "Must be More than or Equal to 3 Character")
     .max(7, "Must be less than or Equal to 7 Character")
+    .matches(/^.[a-zA-Z]+$/, "Must be character only")
 
     .required("Required"),
-  maxSupply: Yup.string().required("Required"),
+  maxSupply: Yup.number()
+    .positive("Must be Positive Values")
 
-  issueTokens: Yup.string().required("Required"),
+    .required("Required"),
+
+  issueTokens: Yup.number()
+    .positive("Must be Positive Values")
+    .required("Required"),
   issueAccount: Yup.string()
     .length(12, "Must be 12 Character")
 
@@ -34,44 +42,33 @@ const SignupSchema = Yup.object().shape({
 });
 
 export default function FreeToken() {
-  const [data, setData] = useState({});
-  const [transfrom, setTransform] = useState();
-
-  // console.log('this is data-->',data);
-
-  // function onSubmit(values: any) {
-  //   console.log("submitted and it is working fine--->");
-  //   console.log("values-->", values);
-  //   setData(values);
-  // }
-
-  // const handleSubmit = (values: any) => {
-    
-  //   const data = {
-  //     accountName: values.accountName,
-  //     issueAccount: values.issueAccount,
-  //     issueTokens: values.issueTokens,
-  //     maxSupply: values.maxSupply,
-  //     tokenSYMBOL: values.tokenSYMBOL.toUpperCase()
-  //   };
-  //   console.log("value===>", data);
-  // };
+  const [data, setData] = useState({
+    accountName: "",
+    tokenSYMBOL: "",
+    maxSupply: "",
+    issueTokens: "",
+    issueAccount: ""
+  });
+  const handleSubmit = (values: any) => {
+    console.log("values===>", values);
+    const formData = {
+      accountName: values.accountName.toLowerCase(),
+      issueAccount: values.issueAccount.toLowerCase(),
+      issueTokens: values.issueTokens,
+      maxSupply: values.maxSupply,
+      tokenSYMBOL: values.tokenSYMBOL.toUpperCase()
+    };
+    setData(formData);
+  };
   return (
     <Container>
       <CommonHeading>FREE TOKEN FEATURES</CommonHeading>
       <Row>
         <Col xs={{ span: 24, offset: 0 }} lg={{ span: 8, offset: 8 }}>
           <Formik
-            initialValues={{
-              accountName: "",
-              tokenSYMBOL: "",
-              maxSupply: "",
-              issueTokens: "",
-              issueAccount: ""
-            }}
+            initialValues={data}
             validationSchema={SignupSchema}
-            onSubmit={values => setData(values)}
-            
+            onSubmit={values => handleSubmit(values)}
           >
             {({ errors, touched }) => (
               <Form>
@@ -81,6 +78,7 @@ export default function FreeToken() {
                     name="accountName"
                     type="text"
                     placeholder="Must Be 12 Characters"
+                    caseTransform="lowercase"
                   />
                   {errors.accountName && touched.accountName ? (
                     <ErrorDiv>{errors.accountName}</ErrorDiv>
@@ -92,7 +90,7 @@ export default function FreeToken() {
                     name="tokenSYMBOL"
                     type="text"
                     placeholder="E.G RAPID"
-                    style={{ textTransform: "uppercase" }}
+                    caseTransform="uppercase"
                   />
                   {errors.tokenSYMBOL && touched.tokenSYMBOL ? (
                     <ErrorDiv>{errors.tokenSYMBOL}</ErrorDiv>
@@ -102,7 +100,7 @@ export default function FreeToken() {
                   <FormLabel>Max Supply</FormLabel>
                   <FormField
                     name="maxSupply"
-                    type="text"
+                    type="number"
                     placeholder="Enter the Max supply"
                   />
                   {errors.maxSupply && touched.maxSupply ? (
@@ -113,7 +111,7 @@ export default function FreeToken() {
                   <FormLabel>Issue Tokens</FormLabel>
                   <FormField
                     name="issueTokens"
-                    type="text"
+                    type="number"
                     placeholder="How Many Token Do You Want To Issue?"
                   />
                   {errors.issueTokens && touched.issueTokens ? (
@@ -126,6 +124,7 @@ export default function FreeToken() {
                     name="issueAccount"
                     type="text"
                     placeholder="Default Will Issue To (TokenAccountName)"
+                    caseTransform="lowercase"
                   />
                   {errors.issueAccount && touched.issueAccount ? (
                     <ErrorDiv>{errors.issueAccount}</ErrorDiv>

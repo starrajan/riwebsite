@@ -16,12 +16,17 @@ export const CommonHeading = styled.h1`
 export const FormLabel = styled.label`
   display: block;
 `;
-export const FormField = styled(Field)`
+export const FormField = styled(Field)<any>`
   border: 1px solid #ccc;
   border-radius: 3px;
-
   width: 100%;
   padding: 4%;
+  text-transform: ${props =>
+    props.caseTransform ? props.caseTransform : null};
+
+  &::placeholder {
+    text-transform: capitalize;
+  }
 `;
 
 export const CardContainer = styled.div<any>`
