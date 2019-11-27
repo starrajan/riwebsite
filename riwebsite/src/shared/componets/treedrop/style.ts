@@ -7,9 +7,18 @@ export const IconImage = styled.img`
   margin-top: 10px;
   cursor: pointer;
 `;
-export const CollapseDiv = styled(Collapse)<any>`
- 
+export const CollapseDiv = styled(Collapse)`
   display: flex;
+
+   .ant-collapse-content-active{
+
+    margin-left:-22px !important;
+
+  }
+
+  .ant-collapse-content-box{
+    padding:0px !important;
+  }
 `;
 
 export const PanelDiv = styled(Panel)`

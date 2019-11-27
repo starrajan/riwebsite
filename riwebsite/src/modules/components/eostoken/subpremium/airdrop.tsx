@@ -3,6 +3,7 @@ import { Checkbox } from "antd";
 import { DatePicker } from "antd";
 import { FormLabel } from "../../../../shared/styles/styles";
 import styled from "styled-components";
+//import {MainAirdropDiv} from './style'
 
 const AirdropDiv = styled.div<any>`
   display: ${props => (props.check ? "block" : "none")};

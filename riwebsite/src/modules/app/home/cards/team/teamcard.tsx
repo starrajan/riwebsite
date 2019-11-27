@@ -16,7 +16,7 @@ export default function TeamCard() {
       <Row>
         <Col xs={24} lg={8}>
           <ImageCard
-            borderId={true}
+            borderId={"true"}
             imageid={Jesse}
             heading={"Jesse Anglen"}
             paragraph={`Short Text to discribe what we do. 
@@ -31,7 +31,7 @@ export default function TeamCard() {
         </Col>
         <Col xs={24} lg={8}>
           <ImageCard
-            borderId={true}
+            borderId={"true"}
             imageid={Prasanjit}
             heading={"Prasanjit Dey"}
             paragraph={`Short Text to discribe what we do. 
@@ -46,7 +46,7 @@ export default function TeamCard() {
         </Col>
         <Col xs={24} lg={8}>
           <ImageCard
-            borderId={false}
+            borderId={"false"}
             imageid={Tyson}
             heading={"Tyson Faulkner"}
             paragraph={`Short Text to discribe what we do. 

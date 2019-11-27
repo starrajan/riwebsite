@@ -8,7 +8,7 @@ import carouselleft from "../../../assets/images/carouselleft.png";
 import carouselright from "../../../assets/images/carouselright.png";
 import { CarouselLinkLeft, CarouselLinkRight, CarouselImage } from "./style";
 import Blockchain from "../header/blockchain";
-//import { CarouselDiv } from "./style";
+import { CarouselDiv } from "./style";
 
 //@ts-ignore
 export default function Home() {
@@ -43,19 +43,21 @@ export default function Home() {
     <div>
       <Blockchain />
 
-      <CarouselLinkLeft onClick={previous}>
-        <CarouselImage src={carouselleft} alt="imagee" />
-      </CarouselLinkLeft>
+      <CarouselDiv >
+        <CarouselLinkLeft onClick={previous}>
+          <CarouselImage src={carouselleft} alt="imagee" />
+        </CarouselLinkLeft>
 
-      <Carousel ref={node => (carousel = node)} {...props} autoplay>
-        <ServiceCard />
+        <Carousel ref={node => (carousel = node)} {...props} autoplay>
+          <ServiceCard />
 
-        <ServiceCard />
-      </Carousel>
+          <ServiceCard />
+        </Carousel>
 
-      <CarouselLinkRight onClick={next}>
-        <CarouselImage src={carouselright} alt="image" />
-      </CarouselLinkRight>
+        <CarouselLinkRight onClick={next}>
+          <CarouselImage src={carouselright} alt="image" />
+        </CarouselLinkRight>
+      </CarouselDiv>
 
       <TechCard />
       <TeamCard />

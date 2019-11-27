@@ -2,11 +2,11 @@ import styled from 'styled-components'
 export const CarouselLinkLeft = styled.a`
   display: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     display: block;
     position: absolute;
-    left: 200px;
-    top: 800px;
+    left: 2%;
+    top: 50%;
     z-index: 1;
   }
 `;
@@ -14,15 +14,19 @@ export const CarouselLinkLeft = styled.a`
 export const CarouselLinkRight = styled.a`
   display: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     display: block;
     position: absolute;
-    right: 200px;
-    top: 800px;
+    right: 2%;
+    top: 50%;
   }
+  
 `;
 export const CarouselImage = styled.img`
-  @media (min-width: 1024px) {
+  
     height: 36px;
-  }
+  
+`;
+export const CarouselDiv =styled.div`
+position:relative;
 `;

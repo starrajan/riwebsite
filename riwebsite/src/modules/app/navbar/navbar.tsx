@@ -6,10 +6,13 @@ import { Link } from "react-router-dom";
 
 import { LogoDiv, NavBar } from "./style";
 
+// interface MenuDivProps{
+//   show: boolean
+// }
+
 const MenuDiv = styled(Menu)<any>`
   list-style-type: none;
 
-  font-style: normal;
   font-weight: normal;
   letter-spacing: 0.14em;
   margin-top: 13px !important;
@@ -18,6 +21,7 @@ const MenuDiv = styled(Menu)<any>`
   top: 69px;
   right: 1px;
   @media (min-width: 1024px) {
+    font-style: normal;
     position: initial;
   }
 
@@ -47,8 +51,8 @@ export default function Navbar() {
     <NavBar>
       <Link to="/">
         <LogoDiv>
-          RAPID
-          <br /> INNOVATION
+          RAPID <br/>
+          INNOVATION
         </LogoDiv>
       </Link>
 
@@ -56,7 +60,7 @@ export default function Navbar() {
         <Icon type={show ? "menu-unfold" : "menu-fold"} />
       </MobileButton>
 
-      <MenuDiv show={show}>
+      <MenuDiv show={show ? 1: 0}>
         <MenuItemDiv>
           <Link to="/about">About Us</Link>
         </MenuItemDiv>

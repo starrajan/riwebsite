@@ -23,7 +23,7 @@ export const Text = styled.p`
 `;
 export const Button = styled.button<any>`
   border: 3px solid #ffffff;
-  box-sizing: border-box;
+
   border-radius: 3px;
   margin-top: 80px;
   padding: 4% 14%;

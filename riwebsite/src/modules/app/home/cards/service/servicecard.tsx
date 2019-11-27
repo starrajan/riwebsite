@@ -15,7 +15,7 @@ export default function ServiceCard() {
       <Row>
         <Col xs={24} lg={8}>
           <IconCard
-            borderId={true}
+            borderId={"true"}
             iconId={starcomputer}
             heading={"Full Stack Dapp Development"}
             paragraph={`Building a dapp on EOS lets you tap into 
@@ -30,7 +30,7 @@ export default function ServiceCard() {
 
         <Col xs={24} lg={8}>
           <IconCard
-            borderId={true}
+            borderId={"true"}
             iconId={gallery}
             heading={"Blockchain Consulting"}
             paragraph={`Blockchain technology is 
@@ -44,7 +44,7 @@ export default function ServiceCard() {
         </Col>
         <Col xs={24} lg={8}>
           <IconCard
-            borderId={false}
+            borderId={"false"}
             iconId={mobile}
             heading={"Tokenization"}
             paragraph={`With tokenization you can turn real

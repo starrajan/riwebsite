@@ -2,26 +2,33 @@ import React from "react";
 import { Header, TokenText, DivSummary, Total } from "./styles";
 
 export default function Summary(props: any) {
+  const {
+    accountName,
+    tokenSYMBOL,
+    maxSupply,
+    issueTokens,
+    issueAccount
+  } = props.data;
+  console.log('ptrops--',props)
   return (
     <DivSummary>
       <Header>Token Summary</Header>
       <TokenText>
-        {"{TokenAccountName}:"}
-        {props.data.accountName}
+       {` {TokenAccountName}:
+        ${accountName}`}
       </TokenText>
       <TokenText>
-        {"{TokenSYMBOL}:"}
-        {props.data.tokenSYMBOL}
+        {`{TokenSYMBOL}: ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
       </TokenText>
       <TokenText>
-  Max Supply:{props.data.maxSupply}{" "}{props.data.tokenSYMBOL}
+       { `Max Supply:${maxSupply} ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
       </TokenText>
       <TokenText>
-        Issue Tokens:{props.data.issueTokens}{" "}{props.data.tokenSYMBOL}
+        {`Issue Tokens:${issueTokens} ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
       </TokenText>
-      <TokenText>Issue Tokens to:{props.data.issueAccount}</TokenText>
+      <TokenText>{`Issue Tokens to:${issueAccount}`}</TokenText>
       <Total>
-        Total:{props.data.issueTokens}{" "}{props.data.tokenSYMBOL}
+        {`Total: ${tokenSYMBOL ? tokenSYMBOL.toUpperCase() : ""}`}
       </Total>
     </DivSummary>
   );

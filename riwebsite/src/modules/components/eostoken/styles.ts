@@ -7,3 +7,6 @@ export const Container = styled.div`
   max-width: 1400px;
   margin: 100px auto;
 `;
+export const ErrorDiv=styled.div`
+color:red;
+`;

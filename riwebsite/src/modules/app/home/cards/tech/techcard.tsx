@@ -14,7 +14,7 @@ export default function TechCard() {
       <Row>
         <Col xs={24} lg={8}>
           <IconCard
-            borderId={true}
+            borderId={"true"}
             iconId={carousel}
             heading={"BLOCKCHAIN"}
             paragraph={`Short Text to describe what we do. Lorem 
@@ -27,7 +27,7 @@ export default function TechCard() {
         </Col>
         <Col xs={24} lg={8}>
           <IconCard
-            borderId={true}
+            borderId={"true"}
             iconId={biometric}
             heading={"SECURITY"}
             paragraph={`Short Text to describe what we do. Lorem 
@@ -40,7 +40,7 @@ export default function TechCard() {
         </Col>
         <Col xs={24} lg={8}>
           <IconCard
-            borderId={false}
+            borderId={"false"}
             iconId={computer}
             heading={"DAPPS"}
             paragraph={`Short Text to describe what we do. Lorem 

@@ -10,7 +10,7 @@ export const DivSummary = styled.div`
   border: 0.5ps solid rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
-  box-sizing: border-box;
+  
   margin:54px auto;
   @media(min-width:1024px){
   margin:0 0 0 50px;

@@ -12,7 +12,7 @@ const ImageDiv = styled.div<any>`
 `;
 
 export function ImageCard(props: any) {
-  console.log("hhhh---->", props);
+  // console.log("hhhh---->", props);
 
   return (
     <ImageContainer border={props.borderId}>
