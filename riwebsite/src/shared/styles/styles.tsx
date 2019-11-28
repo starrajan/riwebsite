@@ -16,13 +16,16 @@ export const CommonHeading = styled.h1`
 export const FormLabel = styled.label`
   display: block;
 `;
-export const FormField = styled(Field)<any>`
+interface CaseType {
+  casetransform: string;
+}
+export const FormField = styled(Field)<CaseType>`
   border: 1px solid #ccc;
   border-radius: 3px;
   width: 100%;
   padding: 4%;
   text-transform: ${props =>
-    props.caseTransform ? props.caseTransform : null};
+    props.casetransform ? props.casetransform : null};
 
   &::placeholder {
     text-transform: capitalize;

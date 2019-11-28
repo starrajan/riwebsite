@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
-import styled from "styled-components";
-
 import { Formik, Form } from "formik";
-
 import { FieldDiv } from "./styles";
 import { FormLabel, FormField } from "../../../shared/styles/styles";
-
 import Summary from "./tokensummary/summary";
-
 import { CommonHeading } from "../../../shared/styles/styles";
-import { Container, ErrorDiv } from "./styles";
-
+import { Container, ErrorDiv,ModalBox } from "./styles";
 import { Row, Col } from "antd";
 
 const SignupSchema = Yup.object().shape({
@@ -49,8 +43,10 @@ export default function FreeToken() {
     issueTokens: "",
     issueAccount: ""
   });
-  const handleSubmit = (values: any) => {
-    console.log("values===>", values);
+
+  const [visible, setVisible] = useState(false);
+
+  const submitData = (values: any, resetForm: any) => {
     const formData = {
       accountName: values.accountName.toLowerCase(),
       issueAccount: values.issueAccount.toLowerCase(),
@@ -59,7 +55,10 @@ export default function FreeToken() {
       tokenSYMBOL: values.tokenSYMBOL.toUpperCase()
     };
     setData(formData);
+    resetForm();
+    setVisible(!visible);
   };
+
   return (
     <Container>
       <CommonHeading>FREE TOKEN FEATURES</CommonHeading>
@@ -68,9 +67,9 @@ export default function FreeToken() {
           <Formik
             initialValues={data}
             validationSchema={SignupSchema}
-            onSubmit={values => handleSubmit(values)}
+            onSubmit={() => setVisible(!visible)}
           >
-            {({ errors, touched }) => (
+            {({ errors, touched, resetForm, values }) => (
               <Form>
                 <FieldDiv>
                   <FormLabel>Token Account Name</FormLabel>
@@ -78,7 +77,7 @@ export default function FreeToken() {
                     name="accountName"
                     type="text"
                     placeholder="Must Be 12 Characters"
-                    caseTransform="lowercase"
+                    casetransform="lowercase"
                   />
                   {errors.accountName && touched.accountName ? (
                     <ErrorDiv>{errors.accountName}</ErrorDiv>
@@ -90,7 +89,7 @@ export default function FreeToken() {
                     name="tokenSYMBOL"
                     type="text"
                     placeholder="E.G RAPID"
-                    caseTransform="uppercase"
+                    casetransform="uppercase"
                   />
                   {errors.tokenSYMBOL && touched.tokenSYMBOL ? (
                     <ErrorDiv>{errors.tokenSYMBOL}</ErrorDiv>
@@ -124,7 +123,7 @@ export default function FreeToken() {
                     name="issueAccount"
                     type="text"
                     placeholder="Default Will Issue To (TokenAccountName)"
-                    caseTransform="lowercase"
+                    casetransform="lowercase"
                   />
                   {errors.issueAccount && touched.issueAccount ? (
                     <ErrorDiv>{errors.issueAccount}</ErrorDiv>
@@ -132,6 +131,23 @@ export default function FreeToken() {
                 </FieldDiv>
 
                 <button type="submit">Submit</button>
+
+                <ModalBox
+                  title="Create EOS Token"
+                  centered={true}
+                  visible={visible}
+                  onOk={() => {
+                    submitData(values, resetForm);
+                  }}
+                  onCancel={() => {
+                    resetForm();
+                    setVisible(!visible);
+                  }}
+                >
+                  <p>Are you sure?</p>
+                  
+                  
+                </ModalBox>
               </Form>
             )}
           </Formik>

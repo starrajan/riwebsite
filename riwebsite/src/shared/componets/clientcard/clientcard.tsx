@@ -4,7 +4,7 @@ import { IconCompany, Text, Button, Clientcard } from "./style";
 export default function ClientCard(props: any) {
   //@ts-ignore
 
-  const onClick = num => {
+  const onClickhandler = num => {
     switch (num) {
       case 1:
         return (
@@ -56,7 +56,7 @@ export default function ClientCard(props: any) {
     <Clientcard>
       <IconCompany src={props.iconCompany}></IconCompany>
       <Text>{props.paragraph}</Text>
-      {onClick(props.link)}
+      {onClickhandler(props.link)}
     </Clientcard>
   );
 }
