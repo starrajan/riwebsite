@@ -1,19 +1,21 @@
 import * as React from "react";
-import Navbar from "../app/navbar/navbar";
+import Navbar from "../components/navbar/navbar";
 import { MainContainer } from "./style";
 
-import About from "../components/about/about";
-import WhyRapid from "../components/why/whyrapid";
-import OurClients from "../components/ourclients/ourclients";
-import Meeting from "../components/meeting/meeting";
-import CreateToken from "../components/eostoken/createtoken";
-import Team from "../components/team/team";
-import Home from "./home/home";
+import About from "../components/pages/about/about";
+import WhyRapid from "../components/pages/why/whyrapid";
+import OurClients from "../components/pages/ourclients/ourclients";
+import Meeting from "../components/pages/meeting/meeting";
+import CreateToken from "../components/pages/eostoken/createtoken";
+import Team from "../components/pages/team/team";
+import Home from "../components/pages/home/home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { GlobalStyle } from "../../shared/styles/globalstyles";
 
 export default function App() {
   return (
     <MainContainer>
+      <GlobalStyle />
       <Router>
         <Navbar />
         <Switch>

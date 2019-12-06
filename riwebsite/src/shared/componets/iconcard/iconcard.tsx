@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CardHeading, CardText } from "../../styles/styles";
+import { CardHeading, CardText } from "./style";
 import { Img } from "./style";
 import { IconContainer } from "./style";
 

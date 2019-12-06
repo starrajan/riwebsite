@@ -9,16 +9,6 @@ export const IconImage = styled.img`
 `;
 export const CollapseDiv = styled(Collapse)`
   display: flex;
-
-   .ant-collapse-content-active{
-
-    margin-left:-22px !important;
-
-  }
-
-  .ant-collapse-content-box{
-    padding:0px !important;
-  }
 `;
 
 export const PanelDiv = styled(Panel)`
